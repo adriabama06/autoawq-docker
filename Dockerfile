@@ -8,8 +8,8 @@ WORKDIR /data
 
 COPY ./AutoAWQ.py /data/AutoAWQ.py
 
-RUN mkdir -p /data/output
+RUN mkdir -p /output
 
-ENV AUTOAWQ_OUTPUTDIR=/data/output
+ENV AUTOAWQ_OUTPUTDIR=/output
 
 ENTRYPOINT [ "python", "AutoAWQ.py" ]

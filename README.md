@@ -15,5 +15,5 @@ docker build . -t autoawq
 ```bash
 # Quantize a model from Hugging Face Hub
 # Output folder will be "Llama3-ChatQA-1.5-8B-awq" in the current working directoy
-docker run --gpus all --rm -v ./output:/data/output autoawq "nvidia/Llama3-ChatQA-1.5-8B"
+docker run --gpus all --rm -v ./output:/output autoawq "nvidia/Llama3-ChatQA-1.5-8B"
 ```
