@@ -11,6 +11,7 @@ docker build . -t autoawq
 ```
 
 ### Example
+### NOTE: On Windows change ./ to .\ -> -v ./output:/output to .\output:/output
 
 ```bash
 # Quantize a model from Hugging Face Hub
