@@ -9,17 +9,13 @@ It takes a single argument: the model. The argument can be a Hugging Face ID (re
 Note that, like the original code, AutoAWQ must be installed:
 
 ```bash
-pip install autoawq
+docker build . -t autoawq
 ```
 
 ### Example
 
 ```bash
 # Quantize a model from Hugging Face Hub
-# Output folder will be 'Llama3-ChatQA-1.5-8B-awq' in the current working directoy
-./AutoAWQ.py 'nvidia/Llama3-ChatQA-1.5-8B'
-
-# Quantize a local model (must be full path)
-# Output folder will be '/srv/models/awq/deepseek-coder-7b-base-v1.5-awq'
-AUTOAWQ_OUTPUTDIR="/srv/models/awq" ./AutoAWQ.py '/srv/models/deepseek-coder-7b-base-v1.5'
+# Output folder will be "Llama3-ChatQA-1.5-8B-awq" in the current working directoy
+docker run --rm -v ./output:/data/output autoawq 'nvidia/Llama3-ChatQA-1.5-8B'
 ```
