@@ -34,7 +34,7 @@ def main():
         model_name = os.path.basename(model_path)
     else:
         # assume HF
-        match = re.search(r'^([a-zA-Z0-9\-]+)/([a-zA-Z0-9\-]+)$', model_path)
+        match = re.search(r'^([a-zA-Z0-9\-\.]+)\/([a-zA-Z0-9\-\.]+)$', model_path)
         if not match:
             print("HF model path must be in the format '<organization>/<repo-name>'")
             sys.exit(2)
